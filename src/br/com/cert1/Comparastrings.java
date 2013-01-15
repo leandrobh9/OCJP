@@ -1,7 +1,7 @@
 package br.com.cert1;
 
 /**
- * 
+ *  
  * (1) O importante a notar é que strings de mesmo valor, vão sendo alocadas
  * no mesmo objeto.
  * Ou seja, dado uma string declarada com valor "teste", novas strings 
