@@ -4,22 +4,15 @@ import br.com.cert1.Heranca;
 
 public class TestHeranca extends Heranca {
 
-	Heranca h2 = new Heranca();
-	
-	void teste(){
-		// not visible (pacote diferente)
-		// h2.a = 4;
+	void teste (){
 		
-		// not visible (mesmo sendo protected, so pode ser acessado via heranca e nao instancia da classe)
-		// h2.b = 5;
+		// ok - acesso via heranca
+		this.b = 4;
 		
-		// correto
-		this.b = 6;
-	}
-	
-	Object teste2(){
-		int a [] = {3,4,5};
-		int b = 3;
-		return b;
+		// não acessível
+		// protected só é acessível via herança
+		Heranca h2 = new Heranca();
+		// comentado apenas para compilar
+		//h2.b = 4;
 	}
 }

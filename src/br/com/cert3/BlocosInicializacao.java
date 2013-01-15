@@ -1,11 +1,14 @@
 package br.com.cert3;
 
-/*
+/**
  * Regra 1:
  * todos os blocos static na arvore da heranca sao executados primeiro
  * 
  * Regra 2: os blocos de instancia sao executados imediatamente depois do construtor pai ser chamado
  * (apos super() ser chamado dentro do construtor)
+ * 
+ * @author Leandro
+ * 
  */
 public class BlocosInicializacao {
 
@@ -19,6 +22,11 @@ public class BlocosInicializacao {
 	
 	{
 		System.out.println("instance of BlocosInicializacao");
+	}
+	
+
+	public static void main(String[] args) {
+		new B();
 	}
 }
 
@@ -51,7 +59,4 @@ class B extends A{
 		System.out.println("instance of B");
 	}
 	
-	public static void main(String[] args) {
-		new B();
-	}
 }

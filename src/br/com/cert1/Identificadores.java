@@ -1,7 +1,7 @@
 package br.com.cert1;
 
 /**
- * ConvenÃ§Ãµes de cÃ³digo:
+ * Convenções de código
  */
 
 /*
@@ -11,27 +11,27 @@ package br.com.cert1;
 public class Identificadores {
 
 	/*
-	 * Identificadores legais comeÃ§am com
+	 * Identificadores legais começam com
 	 * - uma letra
 	 * - underscore (_)
-	 * - ou o cifrÃ£o ($)
+	 * - ou o cifrão ($)
 	 */
 	private int a;
 	private long $3aaaaaaa;
 	private String ______3;
 
 	/*
-	 * VariÃ¡veis: primeira letra minÃºscula. PadrÃ£o camelCase.
+	 * Variáveis: primeira letra minúscula. Padrão camelCase.
 	 */
 	private int idadeMaior;
 	
 	/*
-	 *  Constantes: Letras maiÃºsculas
+	 *  Constantes: Todas as letras maiúsculas
 	 */
 	public static int MAIOR_IDADE = 18;
 	
 	/* 
-	 * MÃ©todos: primeira letra minÃºscula. PadrÃ£o camelCase.
+	 * Métodos: primeira letra minúscula. Padrão camelCase.
 	 */ 
 	public int getA() { 
 		return a; 

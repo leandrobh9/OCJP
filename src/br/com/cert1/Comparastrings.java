@@ -1,5 +1,18 @@
 package br.com.cert1;
 
+/**
+ * 
+ * (1) O importante a notar é que strings de mesmo valor, vão sendo alocadas
+ * no mesmo objeto.
+ * Ou seja, dado uma string declarada com valor "teste", novas strings 
+ * com esse valor, serão o mesmo objeto, e terão == retornando iguais
+ * 
+ * (2) Se for dado um "new String", o retorno de == será diferente
+ * pois será alocado um novo espaço de memória, mesmo sendo o mesmo valor
+ * 
+ * @author Leandro
+ *
+ */
 public class Comparastrings {
 
 	static String s1 = "I am unique!";
@@ -9,7 +22,6 @@ public class Comparastrings {
 		String s2 = "I am unique!";
 		String s3 = new String(s1);
 		
-		// false -- new String para s3
 		System.out.println(s1 == s3);
 		System.out.println(s1 == s2);
 		

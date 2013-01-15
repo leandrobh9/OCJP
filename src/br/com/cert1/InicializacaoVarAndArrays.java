@@ -2,9 +2,9 @@ package br.com.cert1;
 
 /**
  * 
- * @author leandro.asouza
- * Inicializacao de var statics e de instancias
+ * Inicialização de var statics e de instâncias
  * Todas iniciam com valores padrões
+ * @author Leandro
  *
  */
 public class InicializacaoVarAndArrays {
@@ -28,8 +28,12 @@ public class InicializacaoVarAndArrays {
 		int []d[][] = new int[4][5][6];
 		d[3][4][5] = 4;
 		
-		// inicializacao anonima
+		// inicialização anônima
+		// não é declarado o tamanho no new
 		int[]e[] = new int[][]{ {1,2}, {56,9} };
+		
+		// mesmo efeito da inicialização anônima
+		int[]f[] = { {1,2}, {56,9} };
 		
 		// compile mas gera ArrayIndexOutOfBoundsException
 		d[3][4][6] = 3;

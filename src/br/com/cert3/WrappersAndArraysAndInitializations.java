@@ -3,32 +3,34 @@ package br.com.cert3;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Ordem de chamada de métodos:
+ * 
+ * Ampliação (Java 4 já existia)
+ * Autoboxing (int para Integer, etc)
+ * Var-args ("última saída")
+ * 
+ * (1)Se tipo primitivo: 
+ * 	1. Tenta correpondencia direta
+ *  2. Tenta ampliar. (byte -> short, byte -> int, etc)
+ *  3. Tenta boxing (lembrar que neste caso, pode ir de um primitivo para um Boxing (int -> para Integer) e "casar" com Object
+ *  4. Tenta o var-args
+ *   
+ * (2) Se Wrapper: 
+ * 1. Tenta correpondencia direta
+ * 2. Tenta ampliar via hierarquia de objetos (lembrar que um Wrapper eh um Object)
+ * 3. Tenta o unboxing (ex.: se for Short, ira executar (valor).shortValue() e tentar achar um correpondente short primitivo
+ * 4. Tenta o var-args
+ * 
+ * xxxValue (Wrapper para primitive)
+ * parseXXX (String para primitive)
+ * "Wrapper".valueOf(String) (String para Wrapper - lembra que é quase equivalente a dar "new Wrapper("34")" passando string e retornando o new Wrapper).
+ *
+ * @author Leandro
+ * 
+ */
 public class WrappersAndArraysAndInitializations {
 
-	/*
-	 * Ordem de chamada de métodos:
-	 * 
-	 * Ampliação (Java 4 já existia)
-	 * Autoboxing (int para Integer, etc)
-	 * Var-args ("última saída")
-	 * 
-	 * Se tipo primitivo: 
-	 * 	1. Tenta correpondencia direta
-	 *  2. Tenta ampliar.
-	 *  3. Tenta boxing (lembrar que neste caso, pode ir de um primitivo para um Boxing (int -> para Integer) e "casar" com Object
-	 *  4. Tenta o var-args
-	 *   
-	 * Se Wrapper: 
-	 * 1. Tenta correpondencia direta
-	 * 2. Tenta ampliar via hierarquia de objetos (lembrar que um Wrapper eh um Object)
-	 * 3. Tenta o unboxing (ex.: se for Short, ira executar (valor).shortValue() e tentar achar um correpondente short primitivo
-	 * 4. Tenta o var-args
-	 * 
-	 * xxxValue (Wrapper para primitive)
-	 * parseXXX (String para primitive)
-	 * "Wrapper".valueOf(String) (String para Wrapper - lembra que é quase equivalente a dar "new Wrapper("34")" passando string e retornando o new Wrapper).
-	 * 
-	 */
 	
 	void testeArg(short x){
 		System.out.println("short x");
@@ -42,6 +44,10 @@ public class WrappersAndArraysAndInitializations {
 	void testeArg(Float a){
 		System.out.println("Float a");
 	}
+	void testeArg(float x){
+		System.out.println("float x");
+	}
+	
 	/*void testeArg(Object a){
 		System.out.println("Object a");
 	}*/
@@ -63,6 +69,9 @@ public class WrappersAndArraysAndInitializations {
 		
 		float s5 = 4.5F;
 		w.testeArg(s5);
+		
+		int s6 = 5;
+		w.testeArg(s6);
 		
 		// w.testeArg(3);
 	}
