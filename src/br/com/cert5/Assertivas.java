@@ -4,13 +4,17 @@ import java.io.IOException;
 import java.text.ParseException;
 
 /**
- * Por default, assert eh desabilitado
- * Para habilitar eh necessario passar para execucao o argumento
+ * Por default, assert é desabilitado
+ * Para habilitar é necessario passar para execução o argumento
  * -ea ou -enableassertions
  * 
  * Para ser executado pelo Eclipse, basta ir em 
  * Run Configuration -> VM arguments
  * e adicionar -ea ou -enableassertions
+ * 
+ * Lembrar que após o assert, poderá vir uma atribuição, 
+ * chamada a método, uma string (vazia ou preenchida),
+ * porém NÃO PODE VIR uma declaração
  * 
  * @author leandro.asouza
  *
@@ -18,19 +22,19 @@ import java.text.ParseException;
 public class Assertivas {
 	
 	/*
-	 * A partir de Java 1.4, assert tornou-se palavra-chave portanto nao pode ser 
+	 * A partir de Java 1.4, assert tornou-se palavra-chave portanto não pode ser 
 	 * utilizado como nome de var, method, etc como foi inserido logo abaixo
 	 * int assert = 2;
 	 */
 	
 	
 	/**
-	 * O uso ADEQUADO de assert eh que sejam utilizados somente em metodos private
-	 * Pois um metodo publico que eh chamado de forma "externa" a propria classe
-	 * pode ser que nao tenha o conhecimento necessario sobre os argumentos corretos
+	 * O uso ADEQUADO de assert é que sejam utilizados somente em metodos private
+	 * Pois um método público que é chamado de forma "externa" a própria classe
+	 * provavelmente não tem o conhecimento necessário sobre os argumentos corretos
 	 * para serem enviados corretamente.
 	 * 
-	 * No caso de metodos publicos, deve haver um lancamento de excecao do tipo
+	 * No caso de métodos públicos, deve haver um lançamento de exceção do tipo
 	 * IllegalArgumentException conforme metodo go2
 	 * @param a
 	 */
@@ -61,9 +65,9 @@ public class Assertivas {
 	}
 	
 	/**
-	 * Este metodo nao estah sendo utilizado
+	 * Este metodo não está sendo utilizado
 	 * Serve apenas para lembrar que, mesmo ccom a declaracao 'throws IllegalArgumentException' 
-	 * no metodo go2(), nao eh necessario declarar try/catch nem propagar a Exception, devido
+	 * no metodo go2(), não é necessário declarar try/catch nem propagar a Exception, devido
 	 * a IllegalArgumentException SER DESCENDENTE de RuntimeException
 	 * 
 	 */
