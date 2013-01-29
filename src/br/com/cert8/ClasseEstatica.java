@@ -33,12 +33,15 @@ public class ClasseEstatica {
 	}
 	
 	public static void main(String[] args) {
-		new ClasseEstatica().metodoQualquer();
+		// new ClasseEstatica().metodoQualquer();
+		ClasseAuxiliar ca = new ClasseAuxiliar();
+		ca.metodo();
 	}
 }
 
 class ClasseAuxiliar{
 	void metodo(){
 		ClasseEstatica.AninhadaEstatica a = new ClasseEstatica.AninhadaEstatica();
+		a.teste();
 	}
 }
