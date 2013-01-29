@@ -5,6 +5,8 @@ package br.com.cert1;
  * Inicialização de var statics e de instâncias
  * Todas iniciam com valores padrões
  * @author Leandro
+ * 
+ * (1) Tanto variáveis static como de instâncias são inicializadas com valor default 
  *
  */
 public class InicializacaoVarAndArrays {
@@ -13,6 +15,8 @@ public class InicializacaoVarAndArrays {
 	public int ab;
 
 	public void testeInicializacaoVarStaticEInstancias() {
+		
+		// (1) Tanto variáveis static como de instâncias são inicializadas com valor default
 		
 		age = age + 1;
 		System.out.println("The age is " + age);
@@ -43,6 +47,6 @@ public class InicializacaoVarAndArrays {
 	}
 	
 	public static void main(String[] args) {
-		new InicializacaoVarAndArrays().testeInicializaArrays();
+		new InicializacaoVarAndArrays().testeInicializacaoVarStaticEInstancias();
 	}
 }
