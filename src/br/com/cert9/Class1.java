@@ -3,10 +3,10 @@ package br.com.cert9;
 public class Class1 {
 
 	/*
-	 * os objetos java tem 3 mÃ©todos principais
+	 * os objetos java tem 3 métodos principais
 	 * 
 	 * wait, notify, notifyAll
-	 * Os mÃ©todos devem ser chamados de um contexto sicronizado
+	 * Os métodos devem ser chamados de um contexto sicronizado
 	 */
 	public void teste(){
 		String a;

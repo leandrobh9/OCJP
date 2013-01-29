@@ -6,9 +6,9 @@ package br.com.cert9;
  * @author leandro.asouza
  *
  * Estados da Thread
- * 1. Novo: nï¿½o foi chamado o start() ainda.
- * 2. Executï¿½vel: jï¿½ foi chamado o start(). Portanto o sheduler pode levï¿½-lo ao estado ativo a qualquer momento
- * 3. Ativo (Executando): estado do thread em execuï¿½ï¿½o. ï¿½quele que foi chamado pelo sheduler e estï¿½ executando. 
+ * 1. Novo: não foi chamado o start() ainda.
+ * 2. Executável: já foi chamado o start(). Portanto o sheduler pode levá-lo ao estado ativo a qualquer momento
+ * 3. Ativo (Executando): estado do thread em execução. Àquele que foi chamado pelo sheduler e estiver executando. 
  * 
  * Meios de "tentar" (nï¿½o hï¿½ garantias) de retirar um Thread de execuï¿½ï¿½o:
  * yield() -> solicita que o sheduler retire o thread em execuï¿½ï¿½o para colocï¿½-lo no modo executï¿½vel

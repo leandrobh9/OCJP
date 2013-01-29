@@ -1,5 +1,11 @@
 package br.com.cert9;
 
+/**
+ * Utilização de synchronized 
+ * Se não houver este marcador, o método permite 2 threads executem uma parte do código
+ * crítica que é a verificação se há saldo suficiente na conta para efetuar o saque
+ * @param valor
+ */
 public class OperacoesConta implements Runnable{
 
 	private ContaBancaria conta = new ContaBancaria();
@@ -16,10 +22,10 @@ public class OperacoesConta implements Runnable{
 	
 	@Override
 	public void run() {
-		for (int x = 0; x < 50; x++){
+		for (int x = 0; x < 20; x++){
 			operacaoSaque(10);
 			if (conta.getSaldo() < 0){
-				System.out.println("Conta estÃ¡ com saldo insuficiente (overdrawn).");
+				System.out.println("Conta está com saldo insuficiente (overdrawn).");
 			}
 			try {
 				Thread.sleep(1000);
@@ -29,11 +35,17 @@ public class OperacoesConta implements Runnable{
 		}
 	}
 	
+	/**
+	 * Exemplo de utilizacao de synchronized 
+	 * Se não houver este marcador, o método permitir 2 threads executem uma parte do código
+	 * execute uma parte crítica do código que é a verificação se há saldo suficiente na conta
+	 * @param valor
+	 */
 	private synchronized void operacaoSaque(int valor){
 		if (conta.getSaldo() >= valor){
 			System.out.println(Thread.currentThread().getName() + " esta indo sacar...");
 			try {
-				Thread.sleep(500);
+				Thread.sleep(4000);
 			} catch (InterruptedException e) { 
 				System.err.println(e.getMessage());
 			}
@@ -41,7 +53,7 @@ public class OperacoesConta implements Runnable{
 			System.out.println(Thread.currentThread().getName() + " completou o saque... \n" + "Saldo atual: " + conta.getSaldo() );
 		}
 		else {
-			System.out.println("NÃ£o hÃ¡ saldo suficiente para " + Thread.currentThread().getName() + " sacar " + valor);
+			System.out.println("Não há saldo suficiente para " + Thread.currentThread().getName() + " sacar " + valor +". Saldo atual: " + conta.getSaldo());
 		}
 	}
 }

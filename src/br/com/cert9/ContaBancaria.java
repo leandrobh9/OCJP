@@ -2,7 +2,7 @@ package br.com.cert9;
 
 public class ContaBancaria {
 
-	private int saldo = 500;
+	private int saldo = 50;
 	
 	public int getSaldo(){
 		return saldo;

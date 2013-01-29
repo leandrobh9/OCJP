@@ -14,15 +14,15 @@ public class Exercicio9_2 extends Thread{
 	@Override
 	public void run() {
 		synchronized (this) {
-			for (int i = 0; i < 100; i++) {
+			for (int i = 0; i < 500; i++) {
 				System.out.print(this.sb.charAt(0));
 			}
 			System.out.println("");
-			for (int i = 0; i < 100; i++) {
+			for (int i = 0; i < 500; i++) {
 				System.out.print(this.sb.charAt(1));
 			}
 			System.out.println("");
-			for (int i = 0; i < 100; i++) {
+			for (int i = 0; i < 500; i++) {
 				System.out.print(this.sb.charAt(2));
 			}
 			System.out.println("");
