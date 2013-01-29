@@ -24,7 +24,6 @@ public class Sincronizacao implements Runnable{
 		
 	}
 	
-	@Override
 	public void run() {
 		
 	}
