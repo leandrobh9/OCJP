@@ -119,11 +119,20 @@ public class WrappersAndArraysAndInitializations {
 	static void comparingWrappersAndPrimitives(){
 		Integer x = 2;
 		Integer y = 2;
+		Integer z = Integer.valueOf("2");
 		Long l = Long.valueOf(2);
 		l = new Long("2");
+		
 		System.out.println(x == y);
 		System.out.println(x != y);
+		System.out.println(x == z);
+		System.out.println(x != z);
 		System.out.println(x.equals(y));
+
+		// nao compila
+		//System.out.println(l == x);
+		// false
+		System.out.println(l.equals(x));
 		
 		Boolean a = true;
 		if (a){
@@ -164,7 +173,8 @@ public class WrappersAndArraysAndInitializations {
 	}
 	
 	public static void main(String[] args) {
-		executaTesteArgumentos();
+		//executaTesteArgumentos();
 		//referenciaArrays();
+		comparingWrappersAndPrimitives();
 	}
 }
