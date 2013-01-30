@@ -6,7 +6,8 @@ public class TestHeranca extends Heranca {
 	
 	void teste(){
 		h.a = 3;
-		// acesso do mesmo pacote
+		
+		// acesso do mesmo pacote (se fosse fora do pacote, daria erro de compilação)
 		h.b = 4;
 		
 		// acesso via heranca

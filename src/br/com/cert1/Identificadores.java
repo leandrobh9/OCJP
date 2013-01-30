@@ -5,7 +5,7 @@ package br.com.cert1;
  */
 
 /*
- * Classes e interfaces: iniciam com letra maiúscula
+ * Classes e interfaces: iniciam com letra maiuscula
  * 		Ex.: Pessoa, CustomerController
  */
 public class Identificadores {

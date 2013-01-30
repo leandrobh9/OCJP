@@ -2,8 +2,8 @@ package br.com.cert8;
 /**
  * Classes Internas de Método
  * (1) Não aceita modificadores como as classes internas normais (somente abstract ou final)
- * (2) Não acessa vars locais do metodo
- * (3) somente é visível após a declaração da classe
+ * (2) Não acessa vars locais do metodo (somente se tiver marcador final nas variáveis)
+ * (3) Somente é visível após a declaração da classe
  * 
  * @author Leandro
  *
@@ -19,7 +19,7 @@ public class ClasseInternaMetodo {
 		}
 		
 
-		// (2) Não acessa vars locais do metodo (somente se utilizar modificador 
+		// (2) Não acessa vars locais do metodo (somente se tiver marcador final nas variáveis) 
 		int x;
 		class InternaMetodo{
 			
