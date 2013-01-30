@@ -108,6 +108,7 @@ public class WrappersAndArraysAndInitializations {
 		
 		// 4
 		Integer a = Integer.valueOf("0100", 2);
+		Long asdf = Long.valueOf("3.4", 2);
 		//System.out.println(a);
 		
 		// 14
