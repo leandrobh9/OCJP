@@ -32,24 +32,41 @@ import java.util.List;
 public class WrappersAndArraysAndInitializations {
 
 	
-	void testeArg(short x){
-		System.out.println("short x");
-	}
-	void testeArg(Long x){
+	/*void testeArg(Long x){
 		System.out.println("Long x");
 	}
 	void testeArg(short... x){
 		System.out.println("short... x");
+	}*/
+	/*void testeArg(byte x){
+		System.out.println("byte x");
+	}*/
+	void testeArg(float a){
+		System.out.println("float a");
 	}
+	/*
 	void testeArg(Float a){
 		System.out.println("Float a");
 	}
 	void testeArg(float x){
 		System.out.println("float x");
 	}
-	
+	void testeArg(double x){
+		System.out.println("double x");
+	}
+	void testeArg(Short a){
+		System.out.println("Short a");
+	}
+	*/
 	/*void testeArg(Object a){
 		System.out.println("Object a");
+	}*/
+	/*
+	void testeArg(Object... a){
+		System.out.println("Object... a");
+	}
+	void testeArg(Short... a){
+		System.out.println("Short... a");
 	}*/
 	
 	static void executaTesteArgumentos(){
@@ -58,20 +75,20 @@ public class WrappersAndArraysAndInitializations {
 		/*int s1 = 22;
 		w.testeArg(s1);*/
 
-		Short s2 = 22;
-		w.testeArg(s2);
+		/*short s2 = 22;
+		w.testeArg(s2);*/
 		
 		Byte s3 = 22;
 		w.testeArg(s3);
 		
 		/*double s4 = 4.5;
-		w.testeArg(s4);*/
+		w.testeArg(s4);
 		
 		float s5 = 4.5F;
 		w.testeArg(s5);
 		
 		int s6 = 5;
-		w.testeArg(s6);
+		w.testeArg(s6);*/
 		
 		// w.testeArg(3);
 	}
@@ -147,5 +164,6 @@ public class WrappersAndArraysAndInitializations {
 	
 	public static void main(String[] args) {
 		executaTesteArgumentos();
+		//referenciaArrays();
 	}
 }
