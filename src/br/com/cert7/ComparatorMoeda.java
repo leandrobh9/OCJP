@@ -2,6 +2,12 @@ package br.com.cert7;
 
 import java.util.Comparator;
 
+/**
+ * Implementação da interface Comparator
+ * Neste caso uma ordem descrescente
+ * @author Leandro
+ *
+ */
 public class ComparatorMoeda implements Comparator<Moeda> {
 
 	@Override

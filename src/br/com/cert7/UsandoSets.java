@@ -1,9 +1,22 @@
 package br.com.cert7;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
+/**
+ * Lembrar que 
+ * - o método add(obj) retorna um boolean
+ * - TreeSet não aceita adicionar elementos de hierarquias diferentes
+ * - TreeSet pode usar Comparator
+ * @author Leandro
+ * 
+ * Em testeLinkedHashSet() abaixo pode ser visto que a inserção em LinkedHashSet
+ * gera uma ordem (apesar de no livro da Kathy Sierra afirmar que a ordem mesmo
+ * no caso do LinkedHashSet não é garantida
+ *
+ */
 public class UsandoSets {
 
 	public void testeSet(){
@@ -38,7 +51,26 @@ public class UsandoSets {
 		System.out.println(ts2);
 	}
 	
+	public void testeLinkedHashSet(){
+		HashSet<Integer> h = new HashSet<Integer>();
+		this.adiciona(h);
+		System.out.print("HashSet:       ");
+		System.out.println(h);
+		
+		LinkedHashSet<Integer> l = new LinkedHashSet<Integer>();
+		this.adiciona(l);
+		System.out.print("LinkedHashSet: ");
+		System.out.println(l);
+	}
+	
+	public void adiciona(Set<Integer> s){
+		for (int i = 1; i <= 100; i++){
+			// faz o boxing automaticamente para new Integer(i)
+			s.add(i);
+		}
+	}
+	
 	public static void main(String[] args) {
-		new UsandoSets().testeTreeSet();
+		new UsandoSets().testeLinkedHashSet();
 	}
 }

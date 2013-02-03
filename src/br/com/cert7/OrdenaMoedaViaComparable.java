@@ -15,7 +15,9 @@ public class OrdenaMoedaViaComparable {
 		lista.add(m1);
 		lista.add(m2);
 		lista.add(m3);
-		//carrega elementos
+		
+		// não passa parâmetros além da lista (nos próprios objetos da lista
+		// está implementado o Comparable
 		Collections.sort(lista);
 		System.out.println(lista);
 

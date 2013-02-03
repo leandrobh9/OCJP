@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * Lembrar do método indeOf(obj) e get(int)
+ * @author Leandro
+ *
+ */
 public class UsandoLists {
 
 	public void teste(){
@@ -18,6 +23,8 @@ public class UsandoLists {
 		while (i.hasNext()){
 			Integer t = i.next();
 		}
+		
+		// indexOf retorna a posição do elemento consultado na lista
 		System.out.println(l.size() + " " + l.get(0) + " " + l.indexOf(i1) + " " + l.indexOf(45));
 	}
 	

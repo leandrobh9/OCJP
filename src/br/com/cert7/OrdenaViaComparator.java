@@ -14,6 +14,8 @@ public class OrdenaViaComparator {
 		lista.add(m1); 
 		lista.add(m2); 
 		lista.add(m3);
+		
+		// segundo parâmetro é um objeto da classe Comparator
 		Collections.sort(lista, new ComparatorMoeda());
 		System.out.println(lista);
 	}

@@ -1,5 +1,13 @@
 package br.com.cert7;
 
+/**
+ * 
+ * Quando há o acesso à classe pode ser implementado a <<I>> Comparable (subscrever o método) 
+ * Caso contrário, deve-se implementar a <<I>> Comparator (método compare)
+ * 
+ * @author Leandro
+ *
+ */
 public class Moeda 
 		implements Comparable<Moeda>{
 
