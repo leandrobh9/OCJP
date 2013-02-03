@@ -3,6 +3,8 @@ package br.com.cert7;
 import java.util.Comparator;
 
 /**
+ * Auxiliar da classe OrdenaViaComparator no mesmo pacote
+ * 
  * Implementação da interface Comparator
  * Neste caso uma ordem descrescente
  * @author Leandro

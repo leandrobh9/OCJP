@@ -1,6 +1,8 @@
 package br.com.cert7;
 
 /**
+ * Classe que exemplifica a utilização de Comparable e Comparator
+ * Verificar o uso em OrdenaMoedaViaComparable e OrdenaViaComparator
  * 
  * Quando há o acesso à classe pode ser implementado a <<I>> Comparable (subscrever o método) 
  * Caso contrário, deve-se implementar a <<I>> Comparator (método compare)
