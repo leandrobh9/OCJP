@@ -13,7 +13,11 @@ public class Exercicio9_2 extends Thread{
 	
 	@Override
 	public void run() {
-		synchronized (this) {
+		// verificar que o synchronized deve ter como parâmetro o objeto 
+		// que realmente é sicronizado. Exemplo de erro neste caso:
+		// synchronized (this)
+		synchronized (sb) {
+			System.out.println(Thread.currentThread().getName());
 			for (int i = 0; i < 500; i++) {
 				System.out.print(this.sb.charAt(0));
 			}

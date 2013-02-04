@@ -36,8 +36,8 @@ public class OperacoesConta implements Runnable{
 	}
 	
 	/**
-	 * Exemplo de utilizacao de synchronized 
-	 * Se não houver este marcador, o método permitir 2 threads executem uma parte do código
+	 * Exemplo de utilizacao de synchronized em método
+	 * Se não houver este marcador, o método permite que 2 threads executem uma parte do código
 	 * execute uma parte crítica do código que é a verificação se há saldo suficiente na conta
 	 * @param valor
 	 */

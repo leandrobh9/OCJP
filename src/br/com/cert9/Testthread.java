@@ -5,6 +5,8 @@ package br.com.cert9;
  * 
  * @author leandro.asouza
  *
+ * (1) Sobre Threads
+ * 
  * Estados da Thread
  * 1. Novo: não foi chamado o start() ainda.
  * 2. Executável: já foi chamado o start(). Portanto o sheduler pode levá-lo ao estado ativo a qualquer momento
@@ -17,6 +19,9 @@ package br.com.cert9;
  * Meio garantido
  * join() -> determina que um Thread só pode ser executado após a conclusão de outro 
  * Verificar o método abaixo testeJoin() para verificar o funcionamento
+ * 
+ * (2) Sobre o código abaixo
+ * 
  */
 public class Testthread implements Runnable{
 
