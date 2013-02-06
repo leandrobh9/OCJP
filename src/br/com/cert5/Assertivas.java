@@ -4,6 +4,33 @@ import java.io.IOException;
 import java.text.ParseException;
 
 /**
+ * Na utilização de assert, pode haver 1 ou 2 expressões:
+ * assert(valor boolean);
+ * ou
+ * assert(valor boolean) : expressao_que_retorna_valor;
+ * 
+ * Lembrar que essa expressao_que_retorna_valor, é adicionada em um 
+ * System.out.println. Por isso deve retornar um valor. Caso tenha 
+ * 1) um método que tenha void como tipo de retorno ou 
+ * 2) uma declaração de uma variável
+ * os 2 casos são considerados inválidos (não compilam)
+ * 
+ * Antes da versão 1.4 de java, assert poderia ser utilizada até mesmo como 
+ * nome de varíavel (não existia a palavra-chave assert). 
+ * No exame pode cair uma compilação como abaixo:
+ * 
+ * javac -source 1.3 CodigoAntigo.java
+ * 
+ * Deve ser lembrado que
+ * 1) o código irá compilar
+ * 2) será gerado warning na compilação
+ * 
+ * Se o mesmo código for compilado com java 4, ele irá gerar erros de compilação
+ * java -source 1.4 CodigoAntigo.java
+ * Provável que ele possua algo como: int assert = 1; 
+ * So funcionaria portanto com compilação de java 1.3
+ * 
+ * 
  * Por default, assert é desabilitado
  * Para habilitar é necessario passar para execução o argumento
  * -ea ou -enableassertions
@@ -12,9 +39,6 @@ import java.text.ParseException;
  * Run Configuration -> VM arguments
  * e adicionar -ea ou -enableassertions
  * 
- * Lembrar que após o assert, poderá vir uma atribuição, 
- * chamada a método, uma string (vazia ou preenchida),
- * porém NÃO PODE VIR uma declaração
  * 
  * @author leandro.asouza
  *
@@ -87,6 +111,7 @@ public class Assertivas {
 	 */
 	
 	void aposAssert(){
+		// válido
 		int x = 4;
 		int y = 1;
 		assert(x > 3): "";
@@ -96,7 +121,10 @@ public class Assertivas {
 		
 		// invalido
 		// assert(x > 3): int yy = 2;
+		// assert(x > 3) : metodoRetornaVoid();
 	}
 	
 	Object metodoQualquer() { return new Object(); }
+	
+	void metodoRetornaVoid() {  }
 }

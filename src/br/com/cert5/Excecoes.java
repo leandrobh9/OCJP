@@ -123,7 +123,7 @@ public class Excecoes {
 	
 	/**
 	 * Outra Exception lancada pela JVM
-	 * Portanto na declaracao 
+	 * Portanto na declaracao não haveria necessidade como foi feito abaixo
 	 * @throws NullPointerException
 	 */
 	public void tipo3() throws NullPointerException{
