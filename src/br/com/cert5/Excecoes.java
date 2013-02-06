@@ -25,7 +25,7 @@ public class Excecoes {
 	}
 
 	/**
-	 * 		 HIERARQUIA DE EXCEÃ‡Ã•ES
+	 * 		 HIERARQUIA DE EXCEÇÕES
 	 *  
 	 * 
 	 *                Object
@@ -39,7 +39,7 @@ public class Excecoes {
 	 *    /                    /           \
 	 *  ...          RuntimeException        ...
 	 * 
-	 * - Todas as classes Exceptions sï¿½o derivadas de java.lang.Exception
+	 * - Todas as classes Exceptions são derivadas de java.lang.Exception
 	 * - Erros nao sao excecoes e nao derivam da classe Exception
 	 * - Exception, Error, Throwable e RuntimeException podem ser lancados com throw
 	 * 

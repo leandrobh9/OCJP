@@ -90,7 +90,7 @@ public class ControleFluxo {
 		
 		for (int a = 1; a < 10; a++);
 		
-		// atua como loop infinito - compila e executa normalmente
+		// atua como loop infinito - compila e executa
 		/*for (; ;){
 			
 		}*/
