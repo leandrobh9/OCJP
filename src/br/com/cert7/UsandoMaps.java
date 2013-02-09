@@ -4,16 +4,25 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 
+ * 
  * detalhe para implementação de hashCode: 
  * se um atributo é utilizado para cálculo e o mesmo é alterado em um objeto,
  * e o mesmo é alterado posterior à adição de um elemento em um map,
  * ao utilizar m.get(objeto_indice), ele não retornará o elemento desejado
  * Verificar exemplo abaixo.
+ * 
  * @author Leandro
  *
  */
 public class UsandoMaps {
 
+	void testeMaps2(){
+		
+		// não é aceito primitivo e maps (mesmo que para o valor e não chave)
+		// Map<Integer, int> m = new HashMap<Integer, int>();
+	}
+	
 	void testaMaps(){
 		Map<Indice, Cachorro> m = new HashMap<Indice, Cachorro>();
 		
@@ -81,3 +90,6 @@ class Cachorro{
 		return nome;
 	}
 }
+
+interface Pai<E>{}
+interface Qualquer<E> extends Pai<E> { void teste(E x); }

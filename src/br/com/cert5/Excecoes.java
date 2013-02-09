@@ -1,5 +1,12 @@
 package br.com.cert5;
 
+/**
+ * Métodos subscritos não podem lançar exceções mais genéricas
+ * Podem lançar exceções mais específicas
+ *  
+ * @author Leandro
+ *
+ */
 public class Excecoes {
 
 	String s;
@@ -39,7 +46,7 @@ public class Excecoes {
 	 *    /                    /           \
 	 *  ...          RuntimeException        ...
 	 * 
-	 * - Todas as classes Exceptions sï¿½o derivadas de java.lang.Exception
+	 * - Todas as classes Exceptions sao derivadas de java.lang.Exception
 	 * - Erros nao sao excecoes e nao derivam da classe Exception
 	 * - Exception, Error, Throwable e RuntimeException podem ser lancados com throw
 	 * 
@@ -66,7 +73,7 @@ public class Excecoes {
 	
 	
 	/**
-	 * 		 TIPOS DE EXCEÃ‡Ã•ES
+	 * 		 TIPOS DE EXCEÇÕES
 	 *  
 	 *  ---> Descendentes de java.lang.RuntimeExceptions:
 	 *  As descendentes de RuntimeExceptions sao lancadas pela JVM, e nao necessitam ser declaradas
