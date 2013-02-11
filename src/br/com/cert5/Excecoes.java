@@ -32,7 +32,7 @@ public class Excecoes {
 	}
 
 	/**
-	 * 		 HIERARQUIA DE EXCEÃ‡Ã•ES
+	 * 		 HIERARQUIA DE EXCEÇÕES
 	 *  
 	 * 
 	 *                Object
