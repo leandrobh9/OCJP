@@ -9,7 +9,7 @@ public class WaitAndNotify {
 		b.start();
 		System.out.println("Vou solicitar dentro de synchronized, o b.wait() para esperar ele terminar...");
 		System.out.println("No metodo run() de B, quando ele termina, é enviado o notify() para que ele avise que terminou...");
-		
+
 		/**
 		 * Outro teste (descomentar abaixo) e comentar segundo bloco
 		 */
@@ -31,20 +31,20 @@ public class WaitAndNotify {
 				b.wait();
 			}
 			catch(InterruptedException e){}
-			System.out.println("Total is : " + b.total);
+			System.out.println("Numero eh : " + b.numero);
 		}
 		
 	}
 }
 
 class ThreadB extends Thread {
-	long total;
+	long numero;
 	
 	@Override
 	public void run() {
 		synchronized(this){
-			for (long i=0; i<1000000000; i++){
-				total += i;
+			for (long i=0; i<=1000000000; i++){
+				numero = i;
 			}
 			notify();
 		}

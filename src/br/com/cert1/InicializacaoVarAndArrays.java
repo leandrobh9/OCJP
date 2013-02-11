@@ -42,6 +42,13 @@ public class InicializacaoVarAndArrays {
 		// compile mas gera ArrayIndexOutOfBoundsException
 		d[3][4][6] = 3;
 		
+		// invalido
+		//int [] arr = new short[4];
+		
+		// validos
+		Object[] arr1 = new Integer[4];
+		int[][] arr2 = new int[4][];
+		
 		// valor 56
 		System.out.println(e[1][0]);
 	}
