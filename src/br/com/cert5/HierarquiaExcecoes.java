@@ -104,6 +104,35 @@ class SubHierarquiaExcecoes extends HierarquiaExcecoes{
 		// void testeOverridingExcecao() throws Exception{
 	}
 
+	static class X1{
+		void process() throws Exception { throw new Exception(); }
+	}
+	static class Z1 extends X1{
+		void process() { System.out.println("B"); }
+	}
+	
+	public static void main(String[] args) throws Exception {
+//		X1 x = new Z1();
+//		x.process();
+		
+		new SubHierarquiaExcecoes().chamadaMetodoSemException();
+	}
+	
+	public void chamadaMetodoSemException(){
+		try {
+			new SubHierarquiaExcecoes().metodoSemException();
+		} catch (NullPointerException e){
+			System.out.println("entrou");
+			System.err.println(e);
+		}
+	}
+	
+	public void metodoSemException(){
+		// ira estourar NullPointerException
+		Integer i = null;
+		int a = i;
+		System.out.println("teste1");
+	}
 }
 
 class ExceptionA extends Exception {
