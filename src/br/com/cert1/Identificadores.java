@@ -37,5 +37,18 @@ public class Identificadores {
 		return a; 
 	}
 	
+	static void testeArray(){
+		int [] a = new int[3];
+//		a[1000]  = 10;
+		System.out.println(a[0]);
+		System.out.println(a[1]);
+		System.out.println(a[2]);
+		System.out.println(a[3]);
+		
+	}
+	
+	public static void main(String[] args) {
+		testeArray();
+	}
 	
 }

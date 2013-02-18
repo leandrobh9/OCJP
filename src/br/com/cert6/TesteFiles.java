@@ -19,6 +19,10 @@ public class TesteFiles {
 		if (!f.isDirectory()) {
 			System.out.println(f.getName() + " nao eh um diretorio!");
 		}
+		
+		if (f.exists()){
+			System.out.println("Excluiu? " + (f.delete() ? "sim" : "nao")) ;
+		}
 
 		if (!f.isFile()) {
 			System.out.println(f.getName()
@@ -31,8 +35,24 @@ public class TesteFiles {
 			
 			if (f.isFile()){
 				System.out.println(f.getName() + " agora existe em memoria (foi criado).");
-				
 			}
+		}
+		System.out.println("Excluiu novamente? " + (f.delete() ? "sim" : "nao")) ;
+	}
+	
+	void problemaCriacaoArqDirNaoExiste(){
+		File dir = new File("diretorioInexistente");
+		if (dir.isDirectory()){
+			System.out.println("Diretorio existe! Vamos exclui-lo...");
+			System.out.println("Excluiu? " + (dir.delete() ? "sim" : "nao")) ;
+		}
+		
+		System.out.println("Como dir nao eh um diretorio ira estourar uma exception...");
+		File arq = new File(dir, "novo.txt");
+		try {
+			System.out.println("Criação do arquivo: " + arq.createNewFile());
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 	
@@ -129,7 +149,11 @@ public class TesteFiles {
 	public static void main(String[] args) throws IOException {
 		//new TesteFiles().testeFileReaderWriter();
 		//new TesteFiles().testeDirectory();
-		new TesteFiles().testeBufferReaderAndWriter();
+		//new TesteFiles().testeBufferReaderAndWriter();
+		//new TesteFiles().testeFile();
+		
+		new TesteFiles().problemaCriacaoArqDirNaoExiste();
+		
 		
 	}
 }
